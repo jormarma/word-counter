@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Counter</title>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Word counter</h1>
+    </header>
+    <main id="main">
+        <section class="left">
+            <div id="form" class="container">
+                <h2>Text</h2>
+                <label for="text">Input text here</label>
+                <textarea id="text" placeholder="Enter text"></textarea>
+                <div class="buttons">
+                    <label id="file" class="btn" for="input-file" style="margin:0 .3rem 0 0">Load</label>
+                    <input type="file" id="input-file" accept="text/plain" style="display: none" />
+                    <a href="#" class="btn" id="clear">Clear</a>
+                </div>
+            </div>
+            <div id="stats" class="container">
+                <h2>Counters</h2>
+                <div class="main-stats">
+                    <div>
+                        <label>lines</label>
+                        <div id="numlines" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                    <div>
+                        <label>words</label>
+                        <div id="numwords" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                    <div>
+                        <label>chars</label>
+                        <div id="numchars" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                </div>
+                <div class="secondary-stats">
+                    <div>
+                        <label>lines frequency</label>
+                        <div id="freqlines" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                    <div>
+                        <label>word frequency</label>
+                        <div id="freqwords" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                    <div>
+                        <label>char frequency</label>
+                        <div id="freqchars" class="text-digital">000000<span class="text-digital">0</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right">
+            <div class="container">
+                <h2>Frequencies</h2>
+                <div id="lines-freq-table" class="table">
+                    <label>Lines Frequency</label>
+                    <div class="thead">
+                        <div>#</div>
+                        <div>Lines</div>
+                        <div>Freq.</div>
+                    </div>
+                    <div class="tdata"></div>
+                    <div class="tbuttons">
+                        <a class="btn" href="#">CSV</a>
+                    </div>
+                </div>
+                <div id="words-freq-table" class="table">
+                    <label>Words Frequency</label>
+                    <div class="thead">
+                        <div>#</div>
+                        <div>Words</div>
+                        <div>Freq.</div>
+                    </div>
+                    <div class="tdata"></div>
+                    <div class="tbuttons">
+                        <a class="btn" href="#">CSV</a>
+                    </div>
+                </div>
+                <div id="chars-freq-table" class="table">
+                    <label>Characters Frequency</label>
+                    <div class="thead">
+                        <div>#</div>
+                        <div>Chars</div>
+                        <div>Freq.</div>
+                    </div>
+                    <div class="tdata"></div>
+                    <div class="tbuttons">
+                        <a class="btn" href="#">CSV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="pablosoft-logo">
+            <div>P</div>
+            <div>S</div>
+        </div>
+        <p><small>Pablosoft &copy; All rights reserved</small></p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

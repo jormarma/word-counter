@@ -1,0 +1,45 @@
+.pablosoft-logo {
+    flex: 1;
+    display: flex;
+    color: black;
+
+    /* hide the logo temprorarily */
+    display: none;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    width: fit-content;
+    transform: scaleY(.8) skewX(-10deg);
+
+    text-shadow: 1px 1px 3px white,
+                -1px 1px 5px white,
+                1px -1px 8px white,
+                -1px -1px 13px white;
+                
+    div {
+        padding: .2rem .5rem 0 .5rem;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .5),
+        -1px 1px 7px rgba(0, 0, 0, .3),
+        1px -1px 7px rgba(0, 0, 0, .2),
+        -1px -1px 7px rgba(0, 0, 0, .1);
+
+        &:first-child {
+            position: relative;
+            top: -.65rem;
+            border-bottom-left-radius: .8rem;
+            border-top-left-radius: .8rem;
+            background: $ps-left;
+            background: $ps-lg-left;
+        }
+        
+        &:last-child {
+            position: relative;
+            top: .65rem;
+            left: -.25rem;
+            border-bottom-right-radius: .8rem;
+            border-top-right-radius: .8rem;
+            background: $ps-right;
+            background: $ps-lg-right;
+        }
+    }
+}

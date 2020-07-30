@@ -1,0 +1,289 @@
+$lightturq: #def9f0;	// rgb(222,249,240)
+$grey: #cdcdcd;	// rgb(205,205,205)
+$turq: #1ac7ea;	// rgb(26,199,234)
+$dark: #2896d7;	// rgb(40,150,215)
+$light: #90deff;	// rgb(144,222,255)
+$text-primary: #333;
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "Alarm Clock";
+    src: url("../fonts/alarm-clock.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/alarm-clock.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../fonts/alarm-clock.otf") format("opentype"), /* Open Type Font */
+        url("../fonts/alarm-clock.svg") format("svg"), /* Legacy iOS */
+        url("../fonts/alarm-clock.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("../fonts/alarm-clock.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/alarm-clock.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes expand {
+    from {
+        height: 2rem;
+    }
+    to {
+        height: 20vh;
+    }
+}
+
+.text-digital {
+    font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 300;
+    color: $text-primary;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    padding: .5rem;
+    background-color: $light;
+    border-radius: 5px;
+    transition: all .3s ease-out;
+    outline: none;
+
+    &:hover, &:focus {
+        transform: scale(1.1);
+        background-color: $dark;
+        color: $lightturq;
+    }
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding: 1rem;
+    margin: .5rem;
+    border: 1px dotted $light;
+    border-radius: .5rem;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    h1 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        color: $dark;
+        padding: 1rem 2rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 55%;
+            left: 0;
+            width: 100%;
+            height: 45%;
+            border-top: 1px solid $light;
+            background: rgba(255, 255, 255, .7);
+        }
+    }
+}
+
+#main {
+    display: flex;
+    max-width: 1280px;
+    margin: 2rem auto;
+
+    .left {
+        flex: 2;
+        
+        #form {
+            label {
+                display: block;
+                margin-bottom: .3rem;
+            }
+            textarea {
+                resize: none;
+                padding: .5rem;
+                font-size: 1rem;
+                width: 100%;
+                height: 10rem;
+                outline: none;
+                color: $dark;
+                border: 1px solid $grey;
+                border-radius: .5rem;
+                transition: all .3s ease-out;
+                
+                &:focus {
+                    background: lighten($light, 20%);
+                    border: none;
+                    box-shadow: 0 0 6px $dark;
+                }
+            }
+            .buttons {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin: .3rem 0;
+
+                #file-load {
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        #stats {
+            .main-stats {
+                display: flex;
+
+                div {
+                    flex: 1;
+                    margin-right: .5rem;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    label {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    div {
+                        font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+                        width: 100%;
+                        text-align: center;
+                        padding: .3rem;
+                        border: 1px solid $light;
+                        font-size: 1.8rem;
+                        color: lighten($light, 10%);
+                        border-radius: 5px;
+                        user-select: none;
+                        background-color: lighten($light, 20%);
+                        
+                        span {
+                            font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+                            color: $dark;
+                            user-select: text;
+                        }
+                    }
+                }
+            }
+
+            .secondary-stats {
+                display: none;
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+
+        .container {
+            .table {
+                margin: 2rem 0;
+                label {
+                    display: block;
+                    margin-bottom: .3rem;
+
+                    &:before {
+                        content: '+ ';
+                    }
+                }
+
+                .thead {
+                    div {
+                        background-color: $dark;
+                        color: white;
+                        font-weight: 500;
+                    }
+                }
+
+                .tdata {
+                    transition: all .3s ease-out;
+
+                    div {
+                        background-color: lighten($light, 10%);
+                        font-weight: 500;
+                        transition: all .3s ease-out;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        animation-name: expand;
+                        animation-duration: 2s;
+                        animation-timing-function: ease-out;
+                        animation-delay: 3s;
+                        animation-fill-mode: forwards;
+
+                        div {
+                            background-color: lighten($dark, 10%);
+                            color: white;
+                        }
+                    }
+                }
+
+                .thead, .tdata {
+                    /* use a function */
+                    display: grid;
+                    grid-template-columns: 2rem auto 6rem;
+                    
+                    
+                    div {
+                        padding: .3rem .5rem;
+                        border-radius: .2rem;
+                        margin: .1rem;
+
+                        &:first-child {
+                            text-align: center;
+                        }
+                        &:last-child {
+                            text-align: center;
+                        }
+                    }
+                }
+                .tbuttons {
+                    display: none;
+                    justify-content: flex-end;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $dark;
+    background-color: white;
+
+    p {
+        border-top: 1px solid $light;
+        width: 50%;
+        text-align: center;
+        padding: .5rem;
+        font-style: italic;
+
+    }
+
+    .pablosoft-logo {
+        display: none;
+    }
+}

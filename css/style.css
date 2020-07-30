@@ -1,0 +1,331 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Alarm Clock";
+  src: url("../fonts/alarm-clock.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/alarm-clock.eot?#iefix") format("embedded-opentype"), url("../fonts/alarm-clock.otf") format("opentype"), url("../fonts/alarm-clock.svg") format("svg"), url("../fonts/alarm-clock.ttf") format("truetype"), url("../fonts/alarm-clock.woff") format("woff"), url("../fonts/alarm-clock.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@-webkit-keyframes expand {
+  from {
+    height: 2rem;
+  }
+  to {
+    height: 20vh;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 2rem;
+  }
+  to {
+    height: 20vh;
+  }
+}
+
+.text-digital {
+  font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: .5rem;
+  background-color: #90deff;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  outline: none;
+}
+
+.btn:hover, .btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #2896d7;
+  color: #def9f0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.container {
+  padding: 1rem;
+  margin: .5rem;
+  border: 1px dotted #90deff;
+  border-radius: .5rem;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#header h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #2896d7;
+  padding: 1rem 2rem;
+}
+
+#header h1:before {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  border-top: 1px solid #90deff;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin: 2rem auto;
+}
+
+#main .left {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#main .left #form label {
+  display: block;
+  margin-bottom: .3rem;
+}
+
+#main .left #form textarea {
+  resize: none;
+  padding: .5rem;
+  font-size: 1rem;
+  width: 100%;
+  height: 10rem;
+  outline: none;
+  color: #2896d7;
+  border: 1px solid #cdcdcd;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+#main .left #form textarea:focus {
+  background: #f6fcff;
+  border: none;
+  -webkit-box-shadow: 0 0 6px #2896d7;
+          box-shadow: 0 0 6px #2896d7;
+}
+
+#main .left #form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  margin: .3rem 0;
+}
+
+#main .left #form .buttons #file-load {
+  margin-right: .5rem;
+}
+
+#main .left #stats .main-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .left #stats .main-stats div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: .5rem;
+}
+
+#main .left #stats .main-stats div:last-child {
+  margin-right: 0;
+}
+
+#main .left #stats .main-stats div label {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#main .left #stats .main-stats div div {
+  font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+  width: 100%;
+  text-align: center;
+  padding: .3rem;
+  border: 1px solid #90deff;
+  font-size: 1.8rem;
+  color: #c3edff;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #f6fcff;
+}
+
+#main .left #stats .main-stats div div span {
+  font-family: 'Alarm Clock', 'Courier New', Courier, monospace;
+  color: #2896d7;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+#main .left #stats .secondary-stats {
+  display: none;
+}
+
+#main .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main .right .container .table {
+  margin: 2rem 0;
+}
+
+#main .right .container .table label {
+  display: block;
+  margin-bottom: .3rem;
+}
+
+#main .right .container .table label:before {
+  content: '+ ';
+}
+
+#main .right .container .table .thead div {
+  background-color: #2896d7;
+  color: white;
+  font-weight: 500;
+}
+
+#main .right .container .table .tdata {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+#main .right .container .table .tdata div {
+  background-color: #c3edff;
+  font-weight: 500;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+#main .right .container .table .tdata:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#main .right .container .table .tdata:hover div {
+  background-color: #53abdf;
+  color: white;
+}
+
+#main .right .container .table .thead, #main .right .container .table .tdata {
+  /* use a function */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2rem auto 6rem;
+      grid-template-columns: 2rem auto 6rem;
+}
+
+#main .right .container .table .thead div, #main .right .container .table .tdata div {
+  padding: .3rem .5rem;
+  border-radius: .2rem;
+  margin: .1rem;
+}
+
+#main .right .container .table .thead div:first-child, #main .right .container .table .tdata div:first-child {
+  text-align: center;
+}
+
+#main .right .container .table .thead div:last-child, #main .right .container .table .tdata div:last-child {
+  text-align: center;
+}
+
+#main .right .container .table .tbuttons {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: .5rem;
+}
+
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #2896d7;
+  background-color: white;
+}
+
+#footer p {
+  border-top: 1px solid #90deff;
+  width: 50%;
+  text-align: center;
+  padding: .5rem;
+  font-style: italic;
+}
+
+#footer .pablosoft-logo {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
